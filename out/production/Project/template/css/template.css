@@ -1,0 +1,41 @@
+.margin {
+  margin-bottom: 1.5px;
+}
+
+.text-align-center {
+  text-align: center;
+  margin: 50px;
+}
+
+.display-flex-center {
+  display: flex;
+  justify-content: center;
+  margin: 50px;
+}
+
+.footer {
+  display: flex;
+  justify-content: center;
+  position: absolute;
+  bottom: 10px;
+  width: 99%;
+}
+
+.li-style-none {
+  list-style: none;
+  font-size: x-large;
+}
+
+a {
+  font-weight: lighter;
+  color: #379EC1;
+  text-decoration: none;
+}
+
+h1, h2, h3 {
+  font-weight: normal;
+}
+
+html {
+  font-family: Roboto, serif;
+}
