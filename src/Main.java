@@ -10,12 +10,12 @@ public class Main {
     public static void main(String[] args) {
         String pathDbStaff = "src/bd/";
         String fileNameStaff = "staff.txt";
-        int linesCountStaff = Function.fichierExist(fileNameStaff, pathDbStaff);
+        int linesCountStaff = Function.fileExist(fileNameStaff, pathDbStaff);
 
         String pathListeAgentHtml = "src/template/";
         GenerateHtml.generateListeAgentHtml(
                 pathListeAgentHtml,
-                FunctionRead.lireFichierStaff(fileNameStaff, pathDbStaff, linesCountStaff)
+                FunctionRead.readFileStaff(fileNameStaff, pathDbStaff, linesCountStaff)
         );
     }
 }

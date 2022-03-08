@@ -3,8 +3,7 @@ import java.io.FileReader;
 import java.io.IOException;
 
 public class FunctionRead {
-    public static String[] lireFichierStaff(String file, String pathDb, int linesCount) {
-//        System.out.println("Lecture du fichier : " + file);
+    public static String[] readFileStaff(String file, String pathDb, int linesCount) {
         try {
             String line;
             String[] staff = new String[linesCount];
@@ -24,8 +23,7 @@ public class FunctionRead {
         return null;
     }
 
-    public static Liste[] lireFichierListe(String file, String pathDb, int linesCount) {
-//        System.out.println("Lecture du fichier : " + file);
+    public static Liste[] readFileListe(String file, String pathDb, int linesCount) {
         try {
             String line;
             String[] liste = new String[linesCount];
@@ -36,7 +34,7 @@ public class FunctionRead {
                     liste[i] = reader.readLine();
                 }
             }
-            return Function.afficherListe(liste);
+            return Function.getList(liste);
         }
         catch(IOException e)
         {
@@ -45,8 +43,7 @@ public class FunctionRead {
         return new Liste[0];
     }
 
-    public static Agent lireFichierAgent(String file, String pathDb, int linesCount) {
-//        System.out.println("Lecture du fichier : " + file);
+    public static Agent readFileAgent(String file, String pathDb, int linesCount) {
         try {
             BufferedReader reader = new BufferedReader(new FileReader(pathDb + file));
             String name = reader.readLine();
@@ -60,7 +57,6 @@ public class FunctionRead {
             for (int i = 0; i < linesCount; i++) {
                 stuff[i] = reader.readLine();
             }
-            //            afficherAgent(agent);
             return new Agent(name, firstname, job, password, stuff);
         }
         catch(IOException e)
