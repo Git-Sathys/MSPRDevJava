@@ -1,15 +1,21 @@
 package clinique;
 
 import java.io.BufferedReader;
+import java.io.FileNotFoundException;
 import java.io.FileReader;
 import java.io.IOException;
+import java.util.Arrays;
 
 public class FunctionRead {
+
+    private FunctionRead() {
+
+    }
+
     public static String[] readFileStaff(String file, String pathDb, int linesCount) {
-        try {
+        try (BufferedReader reader = new BufferedReader(new FileReader(pathDb + file))){
             String line;
             String[] staff = new String[linesCount];
-            BufferedReader reader = new BufferedReader(new FileReader(pathDb + file));
             while ((line = reader.readLine()) != null) {
                 staff[0] = line;
                 for (int i = 1; i < linesCount; i++) {
@@ -17,19 +23,16 @@ public class FunctionRead {
                 }
             }
             return staff;
-        }
-        catch(IOException e)
-        {
+        } catch (IOException e) {
             e.printStackTrace();
         }
-        return null;
+        return new String[0];
     }
 
     public static Liste[] readFileListe(String file, String pathDb, int linesCount) {
-        try {
+        try (BufferedReader reader = new BufferedReader(new FileReader(pathDb + file))){
             String line;
             String[] liste = new String[linesCount];
-            BufferedReader reader = new BufferedReader(new FileReader(pathDb + file));
             while ((line = reader.readLine()) != null) {
                 liste[0] = line;
                 for (int i = 1; i < linesCount; i++) {
@@ -38,21 +41,19 @@ public class FunctionRead {
             }
             return Function.getList(liste);
         }
-        catch(IOException e)
-        {
+        catch (IOException e) {
             e.printStackTrace();
         }
         return new Liste[0];
     }
 
     public static Agent readFileAgent(String file, String pathDb, int linesCount) {
-        try {
-            BufferedReader reader = new BufferedReader(new FileReader(pathDb + file));
+        try (BufferedReader reader = new BufferedReader(new FileReader(pathDb + file))){
             String name = reader.readLine();
             String firstname = reader.readLine();
             String job = reader.readLine();
             String password = reader.readLine();
-            reader.readLine();
+            String blank = reader.readLine();
 
             linesCount -= 5;
             String[] stuff = new String[linesCount];
@@ -60,9 +61,7 @@ public class FunctionRead {
                 stuff[i] = reader.readLine();
             }
             return new Agent(name, firstname, job, password, stuff);
-        }
-        catch(IOException e)
-        {
+        } catch (IOException e) {
             e.printStackTrace();
         }
         return null;

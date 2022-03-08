@@ -1,13 +1,16 @@
 package clinique;
 
-import java.io.File;
-import java.io.IOException;
-import java.io.PrintWriter;
+import java.io.*;
 import java.nio.file.Files;
 import java.nio.file.Path;
 import java.nio.file.Paths;
+import java.util.stream.Stream;
 
 public class Function {
+
+    private Function() {
+
+    }
 
     static Liste[] getList(String[] liste) {
         Liste[] items = new Liste[liste.length];
@@ -22,11 +25,9 @@ public class Function {
         Path path = Paths.get(pathDb + file);
         if (Files.exists(path)) {
             int lineCount = 0;
-            try {
-                lineCount = (int) Files.lines(path).count();
-            }
-            catch(IOException e)
-            {
+            try (Stream<String> f = Files.lines(path)){
+                lineCount = (int) f.count();
+            } catch (IOException e) {
                 e.printStackTrace();
             }
             return lineCount;
@@ -44,9 +45,7 @@ public class Function {
             writer.println("The second line");
             writer.close();
             return fileName;
-        }
-        catch (IOException e){
-            System.out.println("An error occurred.");
+        } catch (FileNotFoundException | UnsupportedEncodingException e) {
             e.printStackTrace();
         }
         return null;

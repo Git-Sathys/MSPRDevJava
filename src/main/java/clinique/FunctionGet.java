@@ -3,6 +3,11 @@ package clinique;
 import java.util.Arrays;
 
 public class FunctionGet{
+
+    private FunctionGet() {
+
+    }
+
     static String getStaff(String[] staff) {
         StringBuilder staffListe = new StringBuilder();
 

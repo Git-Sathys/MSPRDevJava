@@ -1,10 +1,12 @@
 package clinique;
 
-import java.io.File;
-import java.io.IOException;
-import java.io.PrintWriter;
+import java.io.*;
 
 public class GenerateHtml {
+    private GenerateHtml() {
+
+    }
+
     public static void generateAgentHtml(String pathDb, Agent agent, Liste[] liste) {
         String encoding = "UTF-8";
         String fileName = agent.getPseudo() + ".html";
@@ -89,10 +91,8 @@ public class GenerateHtml {
             PrintWriter writer = new PrintWriter(file, encoding);
             writer.println(html);
             writer.close();
-        }
-        catch (IOException e){
-            System.out.println("An error occurred.");
-            e.printStackTrace();
+        } catch (FileNotFoundException | UnsupportedEncodingException ignored) {
+
         }
     }
 
@@ -129,9 +129,8 @@ public class GenerateHtml {
             writer.println(html);
             writer.close();
         }
-        catch (IOException e){
-            System.out.println("An error occurred.");
-            e.printStackTrace();
+        catch (FileNotFoundException | UnsupportedEncodingException ignored) {
+
         }
     }
 }
