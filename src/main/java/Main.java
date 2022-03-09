@@ -1,6 +1,6 @@
-import clinique.Function;
-import clinique.FunctionRead;
-import clinique.GenerateHtml;
+import securi.Function;
+import securi.FunctionRead;
+import securi.GenerateHtml;
 
 public class Main {
     public static void main(String[] args) {

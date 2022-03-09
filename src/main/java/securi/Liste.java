@@ -1,4 +1,4 @@
-package clinique;
+package securi;
 
 import java.util.HashMap;
 import java.util.Map;

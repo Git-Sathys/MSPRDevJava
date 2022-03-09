@@ -6,8 +6,8 @@
 
     <modelVersion>4.0.0</modelVersion>
 
-    <groupId>clinique</groupId>
-    <artifactId>chatelet</artifactId>
+    <groupId>go</groupId>
+    <artifactId>securi</artifactId>
     <version>1.0.0-SNAPSHOT</version>
 
     <properties>

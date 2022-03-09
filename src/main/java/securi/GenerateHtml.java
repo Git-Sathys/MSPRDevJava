@@ -1,4 +1,4 @@
-package clinique;
+package securi;
 
 import java.io.*;
 

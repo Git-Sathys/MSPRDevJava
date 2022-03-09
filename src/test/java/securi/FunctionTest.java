@@ -1,4 +1,4 @@
-package clinique;
+package securi;
 
 import org.junit.Before;
 import org.junit.Test;
@@ -18,7 +18,7 @@ public class FunctionTest {
 
     @Test
     public void existsTest() {
-        int result = clinique.Function.fileExist("file", "path");
+        int result = securi.Function.fileExist("file", "path");
         assertThat(result, equalTo(-1));
     }
 

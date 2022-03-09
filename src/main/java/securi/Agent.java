@@ -1,4 +1,4 @@
-package clinique;
+package securi;
 
 public class Agent {
     private final String name;
