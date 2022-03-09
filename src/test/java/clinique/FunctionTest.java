@@ -57,4 +57,38 @@ public class FunctionTest {
         Liste[] result = FunctionRead.readFileListe(fileNameListe, pathDbListe, linesCountListe);
         assertThat(result.length, equalTo(10) );
     }
+
+    @Test
+    public void generateAgentTest() {
+        String pathDbAgent = "src/main/java/bd/ficheAgent/";
+        String pathAgentHtml = "src/main/java/template/";
+        String pathDbListe = "src/main/java/bd/";
+        String fileNameListe = "liste.txt";
+        String fileNameAgent = "cberthier" + ".txt";
+        int linesCountListe = Function.fileExist(fileNameListe, pathDbListe);
+        int linesCountAgent = Function.fileExist(fileNameAgent, pathDbAgent);
+
+        boolean result = GenerateHtml.generateAgentHtml(
+                pathAgentHtml,
+                Objects.requireNonNull(FunctionRead.readFileAgent(fileNameAgent, pathDbAgent, linesCountAgent)),
+                FunctionRead.readFileListe(fileNameListe, pathDbListe, linesCountListe)
+        );
+
+        assertThat(result, equalTo(true) );
+    }
+
+    @Test
+    public void generateListeTest() {
+        String pathDbStaff = "src/main/java/bd/";
+        String fileNameStaff = "staff.txt";
+        int linesCountStaff = Function.fileExist(fileNameStaff, pathDbStaff);
+
+        String pathListeAgentHtml = "src/main/java/template/";
+        boolean result = GenerateHtml.generateListeAgentHtml(
+                pathListeAgentHtml,
+                FunctionRead.readFileStaff(fileNameStaff, pathDbStaff, linesCountStaff)
+        );
+
+        assertThat(result, equalTo(true) );
+    }
 }

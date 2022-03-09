@@ -1,32 +1,27 @@
 package clinique;
 
-import java.util.Arrays;
 import java.util.Objects;
 
 public class MultiThreadingFunction implements Runnable {
-    private final String[] staff;
-    public MultiThreadingFunction(String[] staff)
+    private final String agent;
+    public MultiThreadingFunction(String agent)
     {
-        this.staff = staff;
+        this.agent = agent;
     }
 
     public void run() {
         String pathDbAgent = "src/main/java/bd/ficheAgent/";
         String pathAgentHtml = "src/main/java/template/";
-
         String pathDbListe = "src/main/java/bd/";
         String fileNameListe = "liste.txt";
+        String fileNameAgent = this.agent + ".txt";
         int linesCountListe = Function.fileExist(fileNameListe, pathDbListe);
-        Arrays.sort(this.staff);
+        int linesCountAgent = Function.fileExist(fileNameAgent, pathDbAgent);
 
-        for (String agent: this.staff) {
-            String fileNameAgent = agent + ".txt";
-            int linesCountAgent = Function.fileExist(fileNameAgent, pathDbAgent);
-            GenerateHtml.generateAgentHtml(
-                    pathAgentHtml,
-                    Objects.requireNonNull(FunctionRead.readFileAgent(fileNameAgent, pathDbAgent, linesCountAgent)),
-                    FunctionRead.readFileListe(fileNameListe, pathDbListe, linesCountListe)
-            );
-        }
+        GenerateHtml.generateAgentHtml(
+                pathAgentHtml,
+                Objects.requireNonNull(FunctionRead.readFileAgent(fileNameAgent, pathDbAgent, linesCountAgent)),
+                FunctionRead.readFileListe(fileNameListe, pathDbListe, linesCountListe)
+        );
     }
 }

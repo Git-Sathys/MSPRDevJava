@@ -51,7 +51,7 @@ public class FunctionRead {
             String firstname = reader.readLine();
             String job = reader.readLine();
             String password = reader.readLine();
-            String blank = reader.readLine();
+            reader.readLine();
 
             linesCount -= 5;
             String[] stuff = new String[linesCount];

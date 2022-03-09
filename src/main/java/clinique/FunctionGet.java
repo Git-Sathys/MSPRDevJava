@@ -10,10 +10,10 @@ public class FunctionGet{
 
     static String getStaff(String[] staff) {
         StringBuilder staffListe = new StringBuilder();
+        Arrays.sort(staff);
 
-        int n = staff.length;
-        for (int i = 0; i < n; i++) {
-            Thread t = new Thread(new MultiThreadingFunction(staff));
+        for (String s : staff) {
+            Thread t = new Thread(new MultiThreadingFunction(s));
             t.start();
         }
 

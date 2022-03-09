@@ -36,21 +36,6 @@ public class Function {
         }
     }
 
-    public static String generateFile(String fileName, String pathDb) {
-        String encoding = "UTF-8";
-        try{
-            File file = new File(pathDb + fileName);
-            PrintWriter writer = new PrintWriter(file, encoding);
-            writer.println("The first line");
-            writer.println("The second line");
-            writer.close();
-            return fileName;
-        } catch (FileNotFoundException | UnsupportedEncodingException e) {
-            e.printStackTrace();
-        }
-        return null;
-    }
-
     public static String[] checkItems(String[] listeAgent, Liste[] liste) {
         String[] items = new String[liste.length];
         for (int i = 0; i < liste.length; i++) {

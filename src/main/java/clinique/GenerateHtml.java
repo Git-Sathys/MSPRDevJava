@@ -7,7 +7,7 @@ public class GenerateHtml {
 
     }
 
-    public static void generateAgentHtml(String pathDb, Agent agent, Liste[] liste) {
+    public static boolean generateAgentHtml(String pathDb, Agent agent, Liste[] liste) {
         String encoding = "UTF-8";
         String fileName = agent.getPseudo() + ".html";
 
@@ -39,7 +39,7 @@ public class GenerateHtml {
                             "                    <ul style=\"list-style: none\">\n" +
                             "                        <li class='margin'>Mousqueton </li>\n" +
                             "                        <li class='margin'>Gant d'intervention </li>\n" +
-                            "                        <li class='margin'>Brassards de sécurité </li>\n" +
+                            "                        <li class='margin'>Brassards de securite </li>\n" +
                             "                        <li class='margin'>Porte menottes </li>\n" +
                             "                        <li class='margin'>Bandeau agent cynophile </li>\n" +
                             "                        <li class='margin'>Talkies walkies </li>\n" +
@@ -91,12 +91,13 @@ public class GenerateHtml {
             PrintWriter writer = new PrintWriter(file, encoding);
             writer.println(html);
             writer.close();
+            return true;
         } catch (FileNotFoundException | UnsupportedEncodingException ignored) {
-
+            return false;
         }
     }
 
-    public static void generateListeAgentHtml(String pathDb, String[] staff) {
+    public static boolean generateListeAgentHtml(String pathDb, String[] staff) {
         String encoding = "UTF-8";
         String fileName = "listeAgent.html";
         try {
@@ -120,7 +121,7 @@ public class GenerateHtml {
                     "    </body>" +
                     "    <footer class=\"footer\">\n" +
                     "        <div>\n" +
-                    "            Copiright @ 2022 -- Alessandra Quentin / Arnaud Rémi / Baran Lola / Barchi Mehdi\n" +
+                    "            Copiright @ 2022 -- Alessandra Quentin / Arnaud Remi / Baran Lola / Barchi Mehdi\n" +
                     "        </div>\n" +
                     "    </footer>\n" +
                     "</html>";
@@ -128,9 +129,10 @@ public class GenerateHtml {
             PrintWriter writer = new PrintWriter(file, encoding);
             writer.println(html);
             writer.close();
+            return true;
         }
         catch (FileNotFoundException | UnsupportedEncodingException ignored) {
-
+            return false;
         }
     }
 }
