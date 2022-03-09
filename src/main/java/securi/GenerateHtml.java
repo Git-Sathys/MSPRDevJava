@@ -14,79 +14,86 @@ public class GenerateHtml {
         String[] items = Function.checkItems(agent.getList(), liste);
         try {
             String html =
-                    "<html lang=\"fr\">\n" +
-                            "    <meta http-equiv=\"Content-Type\" content=\"text/html; charset=UTF-8\">\n" +
-                            "    <title>Fiche Agent</title>\n" +
-                            "    <link href=\"./css/template.css\" rel=\"stylesheet\">\n" +
-                            "    <body>\n" +
-                            "        <div style=\"display: flex; justify-content: space-between;width: 100%;\">\n" +
-                            "            <div style=\"justify-content: flex-start\">\n" +
-                            "                <ul style=\"list-style: none\">\n" +
-                            "                    <li>Nom : " +
-                            agent.getName() +
-                            "</li>\n" +
-                            "                </ul>\n" +
-                            "            </div>\n" +
-                            "            <div style=\"justify-content: flex-end; width: 400px; height: 250px\">\n" +
-                            "                <img width=\"400\" height=\"250\" src=\"../bd/ficheAgent/" +
-                            agent.getPseudo() +
-                            ".jpg\">\n" +
-                            "            </div>\n" +
-                            "        </div>\n" +
-                            "        <div>\n" +
-                            "            <div style=\"display:flex; justify-content: center\">\n" +
-                            "                <div>\n" +
-                            "                    <ul style=\"list-style: none\">\n" +
-                            "                        <li class='margin'>Mousqueton </li>\n" +
-                            "                        <li class='margin'>Gant d'intervention </li>\n" +
-                            "                        <li class='margin'>Brassards de securite </li>\n" +
-                            "                        <li class='margin'>Porte menottes </li>\n" +
-                            "                        <li class='margin'>Bandeau agent cynophile </li>\n" +
-                            "                        <li class='margin'>Talkies walkies </li>\n" +
-                            "                        <li class='margin'>Lampe torche </li>\n" +
-                            "                        <li class='margin'>Kit oreillette </li>\n" +
-                            "                        <li class='margin'>Tasers </li>\n" +
-                            "                        <li class='margin'>Bombes lacrymogenes </li>\n" +
-                            "                    </ul>\n" +
-                            "                </div>\n" +
-                            "                <div>\n" +
-                            "                    <ul style=\"list-style: none\">\n" +
-                            "                        <li><input type=\"checkbox\" " +
-                            items[0] +
-                            "></li>\n" +
-                            "                        <li><input type=\"checkbox\" " +
-                            items[1] +
-                            "></li>\n" +
-                            "                        <li><input type=\"checkbox\" " +
-                            items[2] +
-                            "></li>\n" +
-                            "                        <li><input type=\"checkbox\" " +
-                            items[3] +
-                            "></li>\n" +
-                            "                        <li><input type=\"checkbox\" " +
-                            items[4] +
-                            "></li>\n" +
-                            "                        <li><input type=\"checkbox\" " +
-                            items[5] +
-                            "></li>\n" +
-                            "                        <li><input type=\"checkbox\" " +
-                            items[6] +
-                            "></li>\n" +
-                            "                        <li><input type=\"checkbox\" " +
-                            items[7] +
-                            "></li>\n" +
-                            "                        <li><input type=\"checkbox\" " +
-                            items[8] +
-                            "></li>\n" +
-                            "                        <li><input type=\"checkbox\" " +
-                            items[9] +
-                            "></li>\n" +
-                            "                    </ul>\n" +
-                            "                </div>\n" +
-                            "            </div>\n" +
-                            "        </div>\n" +
-                            "    </body>\n" +
-                            "</html>\n";
+            "<html lang=\"fr\">\n" +
+                    "    <meta http-equiv=\"Content-Type\" content=\"text/html; charset=UTF-8\">\n" +
+                    "    <title>Fiche Agent</title>\n" +
+                    "    <link href=\"./css/template.css\" rel=\"stylesheet\">\n" +
+                    "    <body>\n" +
+                    "        <div>\n" +
+                    "            <div style=\"display: flex; justify-content: space-evenly; width: 100%\">\n" +
+                    "                <div class=\"display-flex-center\" style=\"align-items: center; width: 200px; height: 150px\">\n" +
+                    "                    <h2>Nom : " +
+                    agent.getName() +
+                    "</h2>\n" +
+                    "                </div>\n" +
+                    "                <div class=\"display-flex-center\" style=\"width: 200px; height: 150px\">\n" +
+                    "                    <img src=\"../bd/asset/securi.png\" alt=\"GO Securi\">\n" +
+                    "                </div>\n" +
+                    "                <div class=\"display-flex-center\" style=\"width: 200px; height: 150px\">\n" +
+                    "                    <img width=\"300\" height=\"180\" src=\"../bd/ficheAgent/" +
+                    agent.getPseudo() +
+                    ".jpg\">\n" +
+                    "                </div>\n" +
+                    "            </div>\n" +
+                    "            <div>\n" +
+                    "                <div class=\"display-flex-center\">\n" +
+                    "                    <h3>Liste des accessoires disponibles pour la mission en cours :</h3>\n" +
+                    "                </div>\n" +
+                    "                <div style=\"display:flex; justify-content: center\">\n" +
+                    "                    <div>\n" +
+                    "                        <ul style=\"list-style: none; padding: 0\">\n" +
+                    "                            <li class='margin'>Mousqueton </li>\n" +
+                    "                            <li class='margin'>Gant d'intervention </li>\n" +
+                    "                            <li class='margin'>Brassards de securite </li>\n" +
+                    "                            <li class='margin'>Porte menottes </li>\n" +
+                    "                            <li class='margin'>Bandeau agent cynophile </li>\n" +
+                    "                            <li class='margin'>Talkies walkies </li>\n" +
+                    "                            <li class='margin'>Lampe torche </li>\n" +
+                    "                            <li class='margin'>Kit oreillette </li>\n" +
+                    "                            <li class='margin'>Tasers </li>\n" +
+                    "                            <li class='margin'>Bombes lacrymogenes </li>\n" +
+                    "                        </ul>\n" +
+                    "                    </div>\n" +
+                    "                    <div>\n" +
+                    "                        <ul style=\"list-style: none\">\n" +
+                    "                            <li><input type=\"checkbox\" " +
+                    items[0] +
+                    "></li>\n" +
+                    "                            <li><input type=\"checkbox\" " +
+                    items[1] +
+                    "></li>\n" +
+                    "                            <li><input type=\"checkbox\" " +
+                    items[2] +
+                    "></li>\n" +
+                    "                            <li><input type=\"checkbox\" " +
+                    items[3] +
+                    "></li>\n" +
+                    "                            <li><input type=\"checkbox\" " +
+                    items[4] +
+                    "></li>\n" +
+                    "                            <li><input type=\"checkbox\" " +
+                    items[5] +
+                    "></li>\n" +
+                    "                            <li><input type=\"checkbox\" " +
+                    items[6] +
+                    "></li>\n" +
+                    "                            <li><input type=\"checkbox\" " +
+                    items[7] +
+                    "></li>\n" +
+                    "                            <li><input type=\"checkbox\" " +
+                    items[8] +
+                    "></li>\n" +
+                    "                            <li><input type=\"checkbox\" " +
+                    items[9] +
+                    "></li>\n" +
+                    "                        </ul>\n" +
+                    "                    </div>\n" +
+                    "                </div>\n" +
+                    "            </div>\n" +
+                    "        </div>\n" +
+                    "    </body>\n" +
+                    "</html>\n" +
+                    "\n";
             File file = new File(pathDb + fileName);
             PrintWriter writer = new PrintWriter(file, encoding);
             writer.println(html);
