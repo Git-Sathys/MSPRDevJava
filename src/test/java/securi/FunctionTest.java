@@ -8,7 +8,6 @@ import java.util.Objects;
 import static org.hamcrest.core.IsEqual.equalTo;
 import static org.junit.Assert.assertThat;
 
-
 public class FunctionTest {
 
     @Before
@@ -36,8 +35,7 @@ public class FunctionTest {
         String fileNameStaff = "staff.txt";
         int linesCountStaff = Function.fileExist(fileNameStaff, pathDbStaff);
         String[] result = FunctionRead.readFileStaff(fileNameStaff, pathDbStaff, linesCountStaff);
-        String[] expected = {"cberthier", "sconnor", "jmacclane", "afoley", "mriggs", "jwest", "sholmes", "jrouletabille"};
-        assertThat(result, equalTo(expected));
+        assertThat(result[0], equalTo("cberthier"));
     }
 
     @Test
@@ -55,7 +53,7 @@ public class FunctionTest {
         String fileNameListe = "liste.txt";
         int linesCountListe = Function.fileExist(fileNameListe, pathDbListe);
         Liste[] result = FunctionRead.readFileListe(fileNameListe, pathDbListe, linesCountListe);
-        assertThat(result.length, equalTo(10) );
+        assertThat(result[0].getName(), equalTo("mousqueton") );
     }
 
     @Test
