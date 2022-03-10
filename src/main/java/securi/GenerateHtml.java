@@ -20,23 +20,23 @@ public class GenerateHtml {
                     "    <link href=\"./css/template.css\" rel=\"stylesheet\">\n" +
                     "    <body>\n" +
                     "        <div>\n" +
-                    "            <div style=\"display: flex; justify-content: space-evenly; width: 100%\">\n" +
-                    "                <div class=\"display-flex-center\" style=\"width: 200px; height: 150px\">\n" +
+                    "            <div class=\"flex-wrap\">\n" +
+                    "                <div class=\"display-flex-center-name\">\n" +
                     "                    <h2>Nom : " +
                     agent.getName() +
                     "</h2>\n" +
                     "                </div>\n" +
-                    "                <div class=\"display-flex-center\" style=\"width: 200px; height: 150px\">\n" +
+                    "                <div class=\"display-flex-center\">\n" +
                     "                    <img src=\"securi.png\" alt=\"GO Securi\">\n" +
                     "                </div>\n" +
-                    "                <div class=\"display-flex-center\" style=\"width: 200px; height: 150px\">\n" +
+                    "                <div class=\"display-flex-center\">\n" +
                     "                    <img width=\"300\" height=\"180\" src=\"" +
                     agent.getPseudo() +
                     ".jpg\">\n" +
                     "                </div>\n" +
                     "            </div>\n" +
                     "            <div>\n" +
-                    "                <div class=\"display-flex-center\">\n" +
+                    "                <div class=\"display-flex-center-other\">\n" +
                     "                    <h3>Liste des accessoires disponibles pour la mission en cours :</h3>\n" +
                     "                </div>\n" +
                     "                <div style=\"display:flex; justify-content: center\">\n" +
@@ -91,7 +91,7 @@ public class GenerateHtml {
                     "                </div>\n" +
                     "            </div>\n" +
                     "        </div>\n" +
-                    "     <div class=\"display-flex-center\">\n" +
+                    "     <div class=\"display-flex-center-other\">\n" +
                     "          <a type=\"button\" value=\"Retour\" href=\"listeAgent.html\">retour</a>\n" +
                     "     </div>\n" +
                     "    </body>\n" +
@@ -118,10 +118,10 @@ public class GenerateHtml {
                     "    <body>\n" +
                     "        <div>\n" +
                     "            <h1 class=\"text-align-center\">Bienvenue sur l'application GO Securi</h1>\n" +
-                    "            <div class=\"display-flex-center\">\n" +
+                    "            <div class=\"display-flex-center-other\">\n" +
                     "                <img src=\"securi.png\" alt=\"GO Securi\">\n" +
                     "            </div>\n" +
-                    "            <div class=\"display-flex-center\">\n" +
+                    "            <div class=\"display-flex-center-other\">\n" +
                     "                <h2>Liste des agents</h2>\n" +
                     "                <ul class=\"li-style-none\">\n" +
                                         FunctionGet.getStaff(staff) +
