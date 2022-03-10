@@ -4,6 +4,7 @@ import java.io.*;
 
 public class GenerateHtml {
     private GenerateHtml() {
+
     }
 
     public static boolean generateAgentHtml(String pathDb, Agent agent, Liste[] liste) {
