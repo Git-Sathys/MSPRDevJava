@@ -16,9 +16,10 @@
 .footer {
   display: flex;
   justify-content: center;
-  position: fixed;
+  position: fixed !important;
   bottom: 10px;
   width: 99%;
+  background-color: white;
 }
 
 .li-style-none {
