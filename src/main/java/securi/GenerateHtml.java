@@ -21,7 +21,8 @@ public class GenerateHtml {
                     "    <body>\n" +
                     "        <div>\n" +
                     "            <div style=\"display: flex; justify-content: space-evenly; width: 100%\">\n" +
-                    "                <div class=\"display-flex-center\" style=\"align-items: center; width: 200px; height: 150px\">\n" +
+                    "                <div style=\"display: inline; justify-content: center; margin: 50pxp; align-items: center; width: 200px; height: 150px\">\n" +
+                    "                    <a type=\"button\" value=\"Retour\" href=\"listeAgent.html\">retour</a>" +
                     "                    <h2>Nom : " +
                     agent.getName() +
                     "</h2>\n" +
