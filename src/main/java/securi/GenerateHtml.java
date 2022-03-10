@@ -21,8 +21,7 @@ public class GenerateHtml {
                     "    <body>\n" +
                     "        <div>\n" +
                     "            <div style=\"display: flex; justify-content: space-evenly; width: 100%\">\n" +
-                    "                <div style=\"display: inline; justify-content: center; margin: 50pxp; align-items: center; width: 200px; height: 150px\">\n" +
-                    "                    <a type=\"button\" value=\"Retour\" href=\"listeAgent.html\">retour</a>" +
+                    "                <div class=\"display-flex-center\" style=\"width: 200px; height: 150px\">\n" +
                     "                    <h2>Nom : " +
                     agent.getName() +
                     "</h2>\n" +
@@ -92,6 +91,9 @@ public class GenerateHtml {
                     "                </div>\n" +
                     "            </div>\n" +
                     "        </div>\n" +
+                    "     <div class=\"display-flex-center\">\n" +
+                    "          <a type=\"button\" value=\"Retour\" href=\"listeAgent.html\">retour</a>\n" +
+                    "     </div>\n" +
                     "    </body>\n" +
                     "</html>\n" +
                     "\n";
@@ -129,7 +131,7 @@ public class GenerateHtml {
                     "    </body>" +
                     "    <footer class=\"footer\">\n" +
                     "        <div>\n" +
-                    "            Copiright @ 2022 -- Alessandra Quentin / Arnaud Remi / Baran Lola / Barchi Mehdi\n" +
+                    "            Copyright @ 2022 -- Alessandra Quentin / Arnaud Remi / Baran Lola / Barchi Mehdi\n" +
                     "        </div>\n" +
                     "    </footer>\n" +
                     "</html>";
