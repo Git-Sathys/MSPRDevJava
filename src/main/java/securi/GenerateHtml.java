@@ -27,10 +27,10 @@ public class GenerateHtml {
                     "</h2>\n" +
                     "                </div>\n" +
                     "                <div class=\"display-flex-center\" style=\"width: 200px; height: 150px\">\n" +
-                    "                    <img src=\"../bd/asset/securi.png\" alt=\"GO Securi\">\n" +
+                    "                    <img src=\"securi.png\" alt=\"GO Securi\">\n" +
                     "                </div>\n" +
                     "                <div class=\"display-flex-center\" style=\"width: 200px; height: 150px\">\n" +
-                    "                    <img width=\"300\" height=\"180\" src=\"../bd/ficheAgent/" +
+                    "                    <img width=\"300\" height=\"180\" src=\"" +
                     agent.getPseudo() +
                     ".jpg\">\n" +
                     "                </div>\n" +
@@ -116,7 +116,7 @@ public class GenerateHtml {
                     "        <div>\n" +
                     "            <h1 class=\"text-align-center\">Bienvenue sur l'application GO Securi</h1>\n" +
                     "            <div class=\"display-flex-center\">\n" +
-                    "                <img src=\"./bd/asset/securi.png\" alt=\"GO Securi\">\n" +
+                    "                <img src=\"securi.png\" alt=\"GO Securi\">\n" +
                     "            </div>\n" +
                     "            <div class=\"display-flex-center\">\n" +
                     "                <h2>Liste des agents</h2>\n" +
